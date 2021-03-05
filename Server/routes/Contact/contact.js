@@ -1,12 +1,14 @@
 const nodemailer = require('nodemailer');
-const creds = require ('./config/config.js');
+const creds = require ('../../config/user.js');
+const recip = require('../../config/recipient.js');
 const express = require('express');
-const creds = require('./config/config.js');
 const router = express.Router();
 
 var transport = {
     host: 'smtp.gmail.com',
     port: 587,
+    secure: false,
+    requireTLS: true,
     auth: {
         user: creds.USER,
         pass: creds.PASS
@@ -32,7 +34,7 @@ router.post('/send', (req, reds, next) => {
 
     const mail = {
         from: name,
-        to: creds.USER,
+        to: recip.USER,
         subject: `New Message from Contact Form (${name})`,
         text: content
     }
