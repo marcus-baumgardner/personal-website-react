@@ -1,8 +1,14 @@
-
+import React from 'react';
+import Navbar from './Components/Navbar/Navbar';
+import ContactForm from './Components/ContactForm/ContactForm';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div className="app">
+      <Navbar />
+      <ContactForm />
+      
+    </div> 
   );
 }
 
