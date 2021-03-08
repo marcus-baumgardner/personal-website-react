@@ -48,18 +48,18 @@ const ContactForm = () => {
                 <Form.Group>
                     <Form.Label>Name: </Form.Label>
                     
-                    <Form.Control type="text" placeholder="Enter Full Name" name="name" />
+                    <Form.Control type="text" placeholder="Enter Full Name" name="name" required="true" />
                 </Form.Group>
 
                 <Form.Group>   
                     <Form.Label>Email: </Form.Label>
-                    <Form.Control type="email" placeholder="Enter Email" name="email"  />
+                    <Form.Control type="email" placeholder="Enter Email" name="email" required="true" />
                 </Form.Group>
 
                 <Form.Group>
                     <Form.Label>Message: </Form.Label>
                     <br/>
-                    <Form.Control type="text" as="textarea" rows = {4} name="message" />
+                    <Form.Control type="text" as="textarea" rows = {4} name="message" required="true" />
                 </Form.Group>
                 <Button type="submit">Submit Message</Button>
             </Form>
