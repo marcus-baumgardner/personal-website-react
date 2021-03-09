@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
+import { Navbar, Row, Col, Nav } from 'react-bootstrap';
 import './Navbar.scss';
 
 
-const Navbar = () => {
+const MyNavbar = () => {
     
     const [ scrolled, setScrolled ] = useState(false);
     
@@ -26,17 +27,16 @@ const Navbar = () => {
 
 
     return (
-        <navbar className = {navbarClasses.join(" ")}>
-            
-            <div className="logo">
-                {/* logo */}
-            </div>
-            <nav className="navigation">
-                <h1>About Me</h1>
-            </nav>
 
-        </navbar >
+        <Navbar expand="lg" className = {navbarClasses.join(" ")}>
+        
+            <Navbar.Brand className="navigation">
+            <h1>About Me</h1>
+            </Navbar.Brand>
+
+        </Navbar >
+        
     )
 };
 
-export default Navbar;
+export default MyNavbar;
